@@ -1,3 +1,4 @@
+// The ball prefab.
 var Ball = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
 {
     // Call for a sprite.
@@ -81,6 +82,7 @@ var Ball = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
         this.animations.play('spin');
     };
     
+    // Collision handle for when the ball collides with the paddle.
     this.ballHitPaddle = function (_ball, _paddle)
     {
         // The difference between the ball and the paddle.
@@ -111,6 +113,7 @@ var Ball = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
         
     };
         
+    // Collision handler for when the ball hit's a brick.
     this.ballHitBrick = function (_ball, _brick)
     {
         // Kill the brick that was hit.
@@ -124,6 +127,7 @@ var Ball = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
         
     };
     
+    // Check's to see if the current wave has been cleared.
     this.checkForWaveClear = function ()
     {
         //  Are there no bricks left?
@@ -131,10 +135,12 @@ var Ball = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
         {
             // Increase the player's score.
             this.increaseScore(1000);
+            // The wave is over.
             this.waveOver();
         }
     };
     
+    // Reset's the ball and call's for the next wave to be created.
     this.waveOver = function ()
     {
         // Reset the bool flag.
@@ -154,16 +160,23 @@ var Ball = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
         GameState.prototype.nextWave();
     };
     
+    // Randomly selects a number for a powerup.
     this.powerupSelect = function (_ball)
     {
+        // Generate a random number between 0 and 10.
         var randomNumber = Math.floor(Math.random() * (12 - 1 + 0)) + 0;
         
+        // Switch this number.
         switch (randomNumber)
         {
+                // Is the number 5?
             case 5:
+                // Spawn a fakeball.
                 fakeBall.SpawnBall(_ball.x, _ball.y);
                 break;
+                // Was it another number?
             default:
+                // End execution.
                 return;
                 break;
         }
