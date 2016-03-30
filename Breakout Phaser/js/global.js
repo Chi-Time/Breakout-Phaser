@@ -32,3 +32,15 @@ var score = 0;
 var startBallKey = {};
 // The key to mute and un-mute game audio.
 var muteAudioKey = {};
+// The background music.
+var bgm = {};
+// The death sound effect.
+var deathSFX = {};
+// The ball bound sound effect.
+var bounceSFX = {};
+// The powerup sound effect.
+var powerupSFX = {};
+// The brick destruction sound effect.
+var breakSFX = {};
+// The game over sound effect.
+var gameOverSFX = {};
