@@ -152,7 +152,7 @@ var Ball = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
         isFakeInPlay = false;
         // Start the next wave of bricks.
         GameState.prototype.nextWave();
-    },
+    };
     
     this.powerupSelect = function (_ball)
     {
