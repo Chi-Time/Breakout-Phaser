@@ -1,3 +1,4 @@
+// The fakeball prefab.
 var FakeBall = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
 {
     // Call for a sprite.
@@ -36,15 +37,19 @@ var FakeBall = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
     // Takes a life and reset's the ball when it leaves the game bounds.
     this.ballOutOfBounds = function ()
     {
+        // Remove this object from the game.
         this.kill();
         // The fake ball is killed and so it isn't in play.
         isFakeInPlay = false;
     };
     
-    this.SpawnBall = function (xPos, yPos)
+    // Re-spawns the ball at the designated position. (Default is 0, 0)
+    this.spawnBall = function (xPos, yPos)
     {
+        // Is the ball currently in play?
         if(!isFakeInPlay)
         {
+            // Reset the fake ball.
             this.reset(xPos, yPos);
             // Set the ball's vertical velocity.
             this.body.velocity.y = -300;
@@ -57,6 +62,7 @@ var FakeBall = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
         }
     };
     
+    // Collision handle for when the fake ball collides with the paddle.
     this.ballHitPaddle = function (_ball, _paddle)
     {
         // The difference between the ball and the paddle.
@@ -84,8 +90,9 @@ var FakeBall = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
             //  Add a little random X velocity to stop it bouncing straight up.
             _ball.body.velocity.x = 2 + Math.random() * 12;
         }
-    },
+    };
         
+    // Collision handle for when the fake ball collides with a brick.
     this.ballHitBrick = function (_ball, _brick)
     {
         // Kill the brick that was hit.
@@ -94,7 +101,7 @@ var FakeBall = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
         this.increaseScore(10);
         // Check if the current wave is cleared.
         ball.checkForWaveClear();
-    },
+    };
     
     // Create an event listener for when the ball get's lost, if it leaves the world bounds call the ballLost function.
     this.events.onOutOfBounds.add(this.ballOutOfBounds, this);
