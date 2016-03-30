@@ -13,9 +13,11 @@ PreloadState.prototype =
         // Load the required game images.
         game.load.atlas('breakout', 'assets/sprites/breakout.png', 'assets/sprites/breakout.json');
         game.load.image('starfield', 'assets/sprites/starfield.png');
+        // Load the required font's.
+        game.load.bitmapFont("mainFont", "assets/fonts/mainFont.png", "assets/fonts/mainFont.fnt");
         
         // Simple debug loading label.
-		var loadingLabel = game.add.text(80, 150, 'loading...', {font: '30px Courier', fill: '#ffffff'});
+		var loadingLabel = game.add.text(80, 150, 'loading...', {font: '30px Arial', fill: '#ffffff'});
         
         //TODO: Create and add loadingBar sprite.
     },
