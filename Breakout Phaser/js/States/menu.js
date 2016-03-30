@@ -14,7 +14,7 @@ MenuState.prototype =
         game.input.onDown.add(this.startGame);
         
         // Simple debug menu label.
-		var menuLabel = game.add.text(400, 300, 'Click to continue', {font: '30px Courier', fill: '#ffffff'});
+		var menuLabel = game.add.text(400, 300, 'Click to continue', {font: '30px Arial', fill: '#ffffff'});
     },
     
     // Start's the game state so that gameplay begins.
