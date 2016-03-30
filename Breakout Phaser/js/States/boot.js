@@ -5,6 +5,12 @@ var BootState = function (game)
 // Extend the boot state.
 BootState.prototype =
 {
+    // Preload's all required assets for the preload state.
+    preload: function ()
+    {
+        //TODO: Load the preload bar.
+    },
+    
     // Create's and initialises all required assets for the boot state.
     create: function ()
     {
