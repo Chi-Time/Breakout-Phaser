@@ -13,6 +13,7 @@ var Brick = function (xPos, yPos, anchorX, anchorY, spritekey, frame)
     this.body.immovable = true;
 };
 
+// Extension of the brick object to become a Phaser sprite.
 Brick.prototype = Object.create(Phaser.Sprite.prototype);
+// Assign the brick's constructor.
 Brick.prototype.constructor = Brick;
-
