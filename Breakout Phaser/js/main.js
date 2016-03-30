@@ -1,5 +1,5 @@
 // The Phaser game object.
-var game = Phaser.Game(800, 600, Phaser.AUTO, 'gameDiv');
+var game = new Phaser.Game(800, 600, Phaser.AUTO);
 
 // Create and define the states for the game.
 game.state.add("Boot", BootState);
