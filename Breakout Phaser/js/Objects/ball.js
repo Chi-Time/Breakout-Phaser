@@ -172,7 +172,7 @@ var Ball = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
                 // Is the number 5?
             case 5:
                 // Spawn a fakeball.
-                fakeBall.SpawnBall(_ball.x, _ball.y);
+                fakeBall.spawnBall(_ball.x, _ball.y);
                 break;
                 // Was it another number?
             default:
