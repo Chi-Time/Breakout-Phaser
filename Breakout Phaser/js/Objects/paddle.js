@@ -14,6 +14,22 @@ var Paddle = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
     this.body.bounce.set(1);
     // Allow the paddle to be moved.
     this.body.immovable = true;
+    
+    this.takeLife = function ()
+    {
+        // Decrement the player's total lives.
+        lives--;
+        // Update the lives text to reflect the change.
+        livesText.text = 'lives: ' + lives;
+    };
+    
+    this.addLife = function ()
+    {
+        // Decrement the player's total lives.
+        lives++;
+        // Update the lives text to reflect the change.
+        livesText.text = 'lives: ' + lives;
+    };
 };
 
 // Extension of the paddle object to become a Phaser sprite.
