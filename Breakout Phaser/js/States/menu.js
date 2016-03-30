@@ -14,6 +14,6 @@ MenuState.prototype =
     // Start's the game state so that gameplay begins.
     startGame: function ()
     {
-        
+        game.state.start("Game");
     },
 };
