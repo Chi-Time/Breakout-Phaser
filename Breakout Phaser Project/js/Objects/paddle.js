@@ -5,7 +5,7 @@ var Paddle = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
     Phaser.Sprite.call(this, game, xPos, yPos, spriteKey, frame);
     // Enable the physics for the sprite body.
 	game.physics.enable(this, Phaser.Physics.ARCADE);
-    // Set the sprite's inital anchor value.
+    // Set the sprite's initial anchor value.
     this.anchor.set(anchorX, anchorY);
     
     // Allow the paddle to collide with the screen bounds.
@@ -14,6 +14,24 @@ var Paddle = function (xPos, yPos, anchorX, anchorY, spriteKey, frame)
     this.body.bounce.set(1);
     // Allow the paddle to be moved.
     this.body.immovable = true;
+    
+    // Removes a life from the player.
+    this.takeLife = function ()
+    {
+        // Decrement the player's total lives.
+        lives--;
+        // Update the lives text to reflect the change.
+        livesText.text = 'lives: ' + lives;
+    };
+    
+    // Awards the player a life.
+    this.addLife = function ()
+    {
+        // Decrement the player's total lives.
+        lives++;
+        // Update the lives text to reflect the change.
+        livesText.text = 'lives: ' + lives;
+    };
 };
 
 // Extension of the paddle object to become a Phaser sprite.

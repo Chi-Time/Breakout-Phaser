@@ -22,6 +22,8 @@ var startFieldBackground = {};
 var ballOnPaddle = true;
 // Boolean to tell if the fake ball is in the game.
 var isFakeInPlay = false;
+// Boolean to tell whether the background music has alread been created.
+var musicExists = false;
 // Boolean to tell if the audio should be muted or not.
 var audioIsMuted = false;
 // The number of the lives the player has.
@@ -32,3 +34,19 @@ var score = 0;
 var startBallKey = {};
 // The key to mute and un-mute game audio.
 var muteAudioKey = {};
+// The key to pause and un-pause the game.
+var pauseGameKey = {};
+// The background music.
+var bgm = {};
+// The death sound effect.
+var deathSFX = {};
+// The paddle bounce sound effect.
+var paddleBounceSFX = {};
+// The ball bound sound effect.
+var bounceSFX = {};
+// The powerup sound effect.
+var powerupSFX = {};
+// The brick destruction sound effect.
+var breakSFX = {};
+// The game over sound effect.
+var gameOverSFX = {};
