@@ -5,13 +5,20 @@ The project is designed as another test of my skills in both JavaScript and Phas
 
 This project was created using the current (as of time of writing) Phaser framework which is currently: **Phaser *2.4.6* "Baerlon**.
 
-Check the dev branch for the latest albeit unstable builds, for stable builds check out the master and for the eventual, minified and published build, check the published branch.
+Check the dev branch for the latest albeit unstable builds, for stable builds check out the master. There will be two folders within the master which are titled as follows:
+
+1.  **"Breakout Phaser Project"** - This is where the source code can be found in it's pure state and in seperate files.
+2.  **"Breakout Phaser Publish"** - This contains a minified source of the game and is used for the final web build.
+
+Each folder contains an index.html file with all of the necessary scripts sources included. The files can be dragged into a web browser such as Firefox or Waterfox, but for Chrome and Edge you'll need to make use of a local server host.
+
+The final game can be found, online and playable at the following link: https://gardevoir.itch.io/breakout-clone-phaser?secret=Nyn8iIDLRhGqHXob8mHzTkHqQ
 
 # Short Project GDD
 
 Detailed below is an extremely short and rough game design document.
 
-NOTE: The project has since had to become smaller in scope due to personal reasons. The time allowed for this project is simply too short to add the features planned. The features that have been removed have strikes through them.
+NOTE: The project has since had to become smaller in scope due to time constraint reasons. The time allowed for this simple hobby project is simply too short to add the features planned. The features that have been removed have strikes through them.
 
 ## Game Proposal
 
@@ -44,17 +51,13 @@ In no particular order here are some of the game mechanics required off of the t
 
 ## Asset List
 
-Again, in no particular order here is a rough asset list for the game.
+Again, in no particular order. Here is a rough asset list for the game.
 
 -  Paddle sprite.
 -  Ball sprite.
 -  4 different brick sprites.
 -  Background image.
--  Menu/Splash screen.
 -  Game font.
--  Text font.
--  Game over screen.
--  3 Different power up sprites.
 -  Power up SFX.
 -  Ball bounce SFX.
 -  Brick destruction SFX.
